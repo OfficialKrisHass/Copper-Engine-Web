@@ -11,7 +11,7 @@ export default function Home() {
         <h1>Copper Engine</h1>
         <h3>The worst choice</h3>
       </div>
-      <div id="about" className={styles.about}>
+      <section id="about" className={styles.container}>
         <h2>About</h2>
         <p>Copper Engine is an open source 3D game engine developed by Kris Hass <small>(HI MOM!!!!)</small> with the current goal of creating a functional engine.
         It is not meant to be a competitor to Unreal, Unity or Godot, instead it's an attempt at creating something, that could one day become one.</p>
@@ -19,10 +19,10 @@ export default function Home() {
         <p>In it's current stage, Copper Engine is capable of creating games with it's C# Scripting Engine, simple but powerful 3D Renderer, and <a href="/#features">many more</a>, using
         a professional level editor that comes prepackaged with the engine. Although the feature of building and distributing your games is not implemented, but planned
         to be in the upcoming Beta 0.4 version.</p>
-      </div>
-      <div className={styles.news}>
+      </section>
+      <section className={styles.container}>
         <h2>What's New</h2>
-        <div className={styles.container}>
+        <div className={styles.newsContainer}>
           <a href="/article/latest">
             <article className={styles.latest}>
               <div className={styles.thumbnail}>
@@ -39,17 +39,17 @@ export default function Home() {
             <a href="/blog">Read more</a>
           </div>
         </div>
-      </div>
-      <div id="features" className={styles.features}>
+      </section>
+      <section id="features" className={styles.container}>
         <h2>Features</h2>
         <FeatureList/>
         <div className={styles.more}>
           <a href="/features">More features</a>
         </div>
-      </div>
-      <div className={styles.contribute}>
+      </section>
+      <section className={styles.container}>
         <h2>Contribute</h2>
-        <div className={styles.container}>
+        <div className={styles.helpContainer}>
           <div className={styles.help}>
             <h3>Code</h3>
             <p>Fix bugs, add features, optimize, anything to do with editing the source code.</p>
@@ -63,7 +63,7 @@ export default function Home() {
             <p>Simply use the engine. That's the easiest and most effective way of supporting this project.</p>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 
