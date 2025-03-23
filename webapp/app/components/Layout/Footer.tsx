@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 import styles from "./Footer.module.css"
 
 export default function Footer() {
@@ -8,15 +10,15 @@ export default function Footer() {
                 <div className={styles.creditsAndSocials}>
                     <p>2021-2025 Kris Hass</p>
                     <div className={styles.socials}>
-                        <a href="https://github.com/OfficialKrisHass/Copper-Engine">
+                        <Link href="https://github.com/OfficialKrisHass/Copper-Engine">
                             <div/>
-                        </a>
-                        <a href="https://github.com/OfficialKrisHass/Copper-Engine">
+                        </Link>
+                        <Link href="https://github.com/OfficialKrisHass/Copper-Engine">
                             <div/>
-                        </a>
-                        <a href="https://github.com/OfficialKrisHass/Copper-Engine">
+                        </Link>
+                        <Link href="https://github.com/OfficialKrisHass/Copper-Engine">
                             <div/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

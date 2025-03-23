@@ -1,18 +1,25 @@
 .navbar {
-  background-color: rgba(17, 17, 17, 255);
+  background-color: var(--navbar-base-color);
   position: fixed;
   top: 0px;
   width: 100%;
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4 1fr);
+  gap: 0px;
   align-items: center;
 }
 
 .navbar h1 {
   font-size: 2rem;
   margin-right: 50px;
+  margin-left: 20px;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 .navbar a {
+  background-color: var(--navbar-base-color);
+  color: var(--text-color);
+  padding: 0.9rem 50px;
   font-size: 2rem;
+  text-align: center;
 }

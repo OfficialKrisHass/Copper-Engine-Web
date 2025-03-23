@@ -1,6 +1,5 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --base-color: #ffffff;
 }
 
 html,
@@ -9,8 +8,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: #ededed;
+  background: var(--base-color);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -23,8 +22,9 @@ body {
 }
 
 h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 30px;
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
 }
 h3 {
     font-size: 1.6rem;
@@ -39,8 +39,12 @@ small {
 }
 
 a {
-  color: inherit;
+  background-color: var(--button-color);
+  color: var(--text-color-secondary);
   text-decoration: none;
+}
+a:hover {
+    background-color: var(--button-color-hover);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -51,7 +55,21 @@ a {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --base-color: #100e0c;
+    --base-color-secondary: #181311;
+    --dark-color: #050504;
+    --dark-color-secondary: #050504;
+    --text-color: #ededed;
+    --text-color-secondary: rgba(255, 128, 33, 255);
+    --button-color: var(--dark-color-secondary);
+        
+    --navbar-base-color: rgba(20, 19, 17, 255);
+
+    --base-color-hover: #151311;
+    --base-color-secondary-hover: #1c1613;
+    --button-color-hover: #e1781a;
+
+    --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    --box-shadow-small: 0px 0px 8px rgba(0, 0, 0,0.5);
   }
 }

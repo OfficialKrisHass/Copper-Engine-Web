@@ -1,6 +1,8 @@
 import ArticleList from "./components/Articles/ArticleList";
 import FeatureList from "./components/Features/FeatureList";
 
+import Link from "next/link";
+
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -9,21 +11,21 @@ export default function Home() {
     <main className={styles.page}>
       <div className={styles.hero}>
         <h1>Copper Engine</h1>
-        <h3>The worst choice</h3>
+        <h2>The worst choice</h2>
       </div>
       <section id="about" className={styles.container}>
         <h2>About</h2>
         <p>Copper Engine is an open source 3D game engine developed by Kris Hass <small>(HI MOM!!!!)</small> with the current goal of creating a functional engine.
         It is not meant to be a competitor to Unreal, Unity or Godot, instead it's an attempt at creating something, that could one day become one.</p>
         <br/>
-        <p>In it's current stage, Copper Engine is capable of creating games with it's C# Scripting Engine, simple but powerful 3D Renderer, and <a href="/#features">many more</a>, using
+        <p>In it's current stage, Copper Engine is capable of creating games with it's C# Scripting Engine, simple but powerful 3D Renderer, and <Link href="/#features">many more</Link>, using
         a professional level editor that comes prepackaged with the engine. Although the feature of building and distributing your games is not implemented, but planned
         to be in the upcoming Beta 0.4 version.</p>
       </section>
       <section className={styles.container}>
         <h2>What's New</h2>
         <div className={styles.newsContainer}>
-          <a href="/article/latest">
+          <Link href="/article/latest">
             <article className={styles.latest}>
               <div className={styles.thumbnail}>
               </div>
@@ -33,10 +35,10 @@ export default function Home() {
                 in it's entirety but cut off at some point, okay I don't know what to say anymore</p>
               </div>
             </article>
-          </a>
+          </Link>
           <ArticleList/>
           <div className={styles.more}>
-            <a href="/blog">Read more</a>
+            <Link href="/blog">Read more</Link>
           </div>
         </div>
       </section>
@@ -44,7 +46,7 @@ export default function Home() {
         <h2>Features</h2>
         <FeatureList/>
         <div className={styles.more}>
-          <a href="/features">More features</a>
+          <Link href="/features">More features</Link>
         </div>
       </section>
       <section className={styles.container}>

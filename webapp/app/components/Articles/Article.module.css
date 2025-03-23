@@ -1,9 +1,19 @@
-.thumbnail {
-    background-color: black;
+.article {
+    color: var(--text-color);
     border-radius: 12px;
+    padding: 5px;
+}
+.article:hover {
+    background-color: var(--base-color-hover);
+}
+
+.thumbnail {
+    background-color: var(--dark-color);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-small);
     aspect-ratio: 16/9;
 }
 
 .info {
-    padding: 10px 5px 0px;
+    margin-top: 10px;
 }

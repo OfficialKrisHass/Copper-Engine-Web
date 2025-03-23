@@ -1,5 +1,5 @@
 .footer {
-    background-color: black;
+    background-color: var(--dark-color);
     padding: 20px;
     margin-top: 100px;
 }
@@ -21,7 +21,7 @@
     text-align: right;
 }
 .socials a {
-    background-color: var(--background);
+    background-color: var(--base-color);
     aspect-ratio: 1/1;
     width: 4rem;
     margin-right: 15px;
