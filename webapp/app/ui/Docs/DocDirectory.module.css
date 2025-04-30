@@ -7,9 +7,7 @@
     margin-bottom: 8px;
 }
 .item a {
-    color: var(--text-color)
-}
-.item a:hover {
+    color: var(--text-color);
     background-color: var(--base-color);
 }
 

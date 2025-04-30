@@ -38,7 +38,7 @@ export default function DocDirectory({ item, path, level = 0, openPaths, toggleP
                     })}
                     {hasEntries && item.entries!.map(entry => (
                         <li key={entry} className={styles.item}>
-                            <Link href={item.title.toLowerCase() + '.' + entry.toLowerCase()}>{entry}</Link>
+                            <Link href={"/docs/" + entry.toLowerCase()}>{entry}</Link>
                         </li>
                     ))}
                 </ul>
