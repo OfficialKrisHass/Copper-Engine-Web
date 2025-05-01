@@ -1,6 +1,11 @@
+import { config } from "@/config";
+
 import styles from "./page.module.css"
 
-export default function Docs() {
+export default async function Docs() {
+
+    const data = await fetch("http://127.0.0.1:8080/", { next: { revalidate: config.RevalidateTime }});
+    const text = await data.text();
 
     return (
         <>
@@ -23,6 +28,10 @@ export default function Docs() {
             <br/>
             <p>You are always welcome to update or add documentation as I have to do it manually at the moment, which is prone to leave in faulty information or
             straight up not adding a new entry. You can always submit a request on github with the changes and I will try to update it to the site ASAP (pinkie promise)</p>
+            <br/>
+            <pre>
+                {text}
+            </pre>
         </>
     )
 

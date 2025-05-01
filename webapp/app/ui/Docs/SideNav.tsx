@@ -6,37 +6,11 @@ import { useState } from "react";
 
 import styles from "./SideNav.module.css"
 
-export default function SideNav() {
+type Props = {
+    entries: EntryData[];
+}
 
-    const data : EntryData[] = [
-        {
-            title: "Engine",
-            subDirs: [
-                {
-                    title: "Core",
-                    entries: [ "Engine", "Window", "UUID" ]
-                },
-                {
-                    title: "Renderer",
-                    entries: [ "Renderer", "VertexArray", "VertexBuffer", "Shader", "Material" ]
-                },
-                {
-                    title: "Scripting",
-                    entries: [ "ScriptingEngine", "Script" ],
-                },
-                {
-                    title: "Input",
-                    entries: [ "Input", ],
-                },
-            ],
-        },
-        {
-            title: "Editor",
-        },
-        {
-            title: "ScriptingAPI",
-        },
-    ]
+export default function SideNav({ entries } : Props) {
 
     const [openPaths, setOpenPaths] = useState<Record<string, boolean>>({});
 
@@ -52,7 +26,7 @@ export default function SideNav() {
             <h3>Table of Contents</h3>
             <hr/>
             <ul>
-                {data.map((entry, index) =>
+                {entries.map((entry, index) =>
                     <SideNavEntry key={index} item={entry} path={entry.title} openPaths={openPaths} togglePath={togglePath}/>
                 )}
             </ul>

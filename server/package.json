@@ -1,10 +1,11 @@
 {
   "name": "server",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "tsc && nodemon dist/server.js"
+    "dev": "nodemon src/server.ts"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +13,11 @@
   "description": "",
   "devDependencies": {
     "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
     "typescript": "^5.6.3"
   },
   "dependencies": {
+    "@types/express": "^5.0.1",
     "express": "^4.21.1"
   }
 }
