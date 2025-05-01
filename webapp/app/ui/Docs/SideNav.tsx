@@ -1,6 +1,6 @@
 'use client'
 
-import DocDirectory, { Data } from "./DocDirectory";
+import SideNavEntry, { Data as EntryData } from "./SideNavEntry";
 
 import { useState } from "react";
 
@@ -8,9 +8,9 @@ import styles from "./SideNav.module.css"
 
 export default function SideNav() {
 
-    const data : Data[] = [
+    const data : EntryData[] = [
         {
-            title: "Copper-Engine",
+            title: "Engine",
             subDirs: [
                 {
                     title: "Core",
@@ -31,14 +31,11 @@ export default function SideNav() {
             ],
         },
         {
-            title: "Copper-Editor",
+            title: "Editor",
         },
         {
-            title: "Copper-ScriptingAPI",
+            title: "ScriptingAPI",
         },
-        {
-            title: "Copper-Runtime",
-        }
     ]
 
     const [openPaths, setOpenPaths] = useState<Record<string, boolean>>({});
@@ -51,12 +48,12 @@ export default function SideNav() {
     }
 
     return (
-        <aside className={styles.navbar}>
+        <aside className={styles.sidenav}>
             <h3>Table of Contents</h3>
             <hr/>
             <ul>
                 {data.map((entry, index) =>
-                    <DocDirectory key={index} item={entry} path={entry.title} openPaths={openPaths} togglePath={togglePath}/>
+                    <SideNavEntry key={index} item={entry} path={entry.title} openPaths={openPaths} togglePath={togglePath}/>
                 )}
             </ul>
         </aside>

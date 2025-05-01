@@ -2,15 +2,11 @@
     cursor: pointer;
 }
 
-.item {
+.entry {
     margin-left: 20px;
     margin-bottom: 8px;
 }
-.item a {
+.entry a {
     color: var(--text-color);
     background-color: var(--base-color);
-}
-
-.collapsed {
-    display: none;
 }

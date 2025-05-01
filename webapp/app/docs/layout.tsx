@@ -7,7 +7,7 @@ export default function DocsLayout({ children } : { children: React.ReactNode })
     return (
         <main className={styles.main}>
             <SideNav/>
-            <div>
+            <div className={styles.page}>
                 {children}
             </div>
         </main>
