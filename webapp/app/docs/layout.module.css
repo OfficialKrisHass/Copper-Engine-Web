@@ -5,6 +5,7 @@
 
 .page {
     padding: 20px;
+    padding-bottom: 100px;
     min-height: 80vh;
 }
 .page h2 {

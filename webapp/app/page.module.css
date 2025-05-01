@@ -2,6 +2,7 @@
 
 .page {
   font-family: var(--font-geist-sans);
+  padding-bottom: 100px;
 }
 
 .container {
