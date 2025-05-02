@@ -1,7 +1,6 @@
 import express from "express"
 
-import type { EntryData } from "./types/Documentation.ts";
-import { GetDocumentationEntries } from "./documentation.ts";
+import docsRouter from "./routes/docs.ts";
 
 const APIInfo = {
     name: "Copper-Engine web API",
@@ -10,28 +9,14 @@ const APIInfo = {
 
 const app = express();
 
-var docEntries: EntryData[] = [];
-GetDocumentationEntries().then(entries => {
-
-    if (entries)
-        docEntries = entries
-
-});
-
-
 app.use(express.json());
+app.use("/docs", docsRouter);
 
 app.get("/", (req, res) => {
 
     res.status(200).json(APIInfo);
 
 });
-
-app.get("/docs/", (req, res) => {
-
-    res.status(200).json(docEntries);
-
-})
 
 app.listen(process.env.PORT, () => {
 

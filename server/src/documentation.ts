@@ -1,10 +1,13 @@
-import type { EntryData } from "./types/Documentation.ts"
+import type { EntryData, DocData } from "./types/Documentation.ts"
 
-import { promises } from "fs";
+import fs, { promises } from "fs";
+import readline from "readline";
 
 import path from "path"
 
-export async function GetDocumentationEntries() : Promise<EntryData[] | undefined> {
+var docData: Record<string, DocData> = {};
+
+export async function LoadDocumentationEntries() : Promise<EntryData[] | undefined> {
     
     // little bit of fuckery to make the order of top level directories how we want (engine before editor)
     let ret: EntryData[] = [ { title: "Engine" }, { title: "Editor" }, ];
@@ -35,6 +38,8 @@ export async function GetDocumentationEntries() : Promise<EntryData[] | undefine
                 const title = file.substring(0, file.lastIndexOf('.'));
                 back.entries.push(title);
 
+                await ProcessDoc(fullPath, path.basename(dir) + '.' + title);
+
             }
 
         }
@@ -44,9 +49,59 @@ export async function GetDocumentationEntries() : Promise<EntryData[] | undefine
     }
 
     await walk(dir + "/Engine");
-    await walk(dir + "/Editor");
 
     return ret;
 
 }
 
+export function GetDocumentationData(entry: string) : DocData | undefined {
+
+    if (!(entry in docData)) return undefined;
+    return docData[entry];
+
+}
+
+async function ProcessDoc(fullPath: string, title: string) : Promise<void> {
+
+    const stream = fs.createReadStream(fullPath);
+    const rl = readline.createInterface({ input: stream, crlfDelay: Infinity });
+
+    let lines: string[] = [];
+    for await (const line of rl) {
+        lines.push(line);
+    }
+
+    let data: DocData = {};
+    let arr: string[] | undefined = undefined;
+    for (let i: number = 0; i < lines.length; i++) {
+
+        const line: string = lines[i];
+        if (arr) {
+
+            if (line === "") continue;
+            if (line[0] === '#')
+                arr = undefined;
+            else
+                arr.push(line);
+
+        }
+
+        switch (line) {
+
+            case "# Summary": data.summary = lines[++i]; break;
+            case "# Header": data.header = lines[++i]; break;
+            case "# Source": data.source = lines[++i]; break;
+            case "# Namespace": data.namespace = lines[++i]; break;
+            case "# Type": data.type = lines[++i]; break;
+            case "# Functions": data.functions = []; arr = data.functions; break;
+            case "# Defines": data.defines = []; arr = data.defines; break;
+            case "# Types": data.types = []; arr = data.types; break;
+
+        }
+
+    }
+
+    if (data.summary && data.header && data.source && data.namespace && data.type)
+        docData[title] = data;
+
+}
