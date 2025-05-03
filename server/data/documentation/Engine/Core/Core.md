@@ -11,9 +11,9 @@ No namespace
 Header file
 
 # Functions
-extern bool Editor::IsRuntimeRunning()
+const fs::path& ExecutableFolder()#Returns the path of the folder where the current executable is located.
 
-const fs::path& ExecutableFolder()
+bool Editor::IsRuntimeRunning()#Only when CU_EDITOR is defined, returns true if the runtime is running (play button has been pressed).
 
 # Defines
 FLAG(bit)#Returns a number where only the bit at position bit is 1.

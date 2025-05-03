@@ -1,3 +1,5 @@
+import Details from "@/app/ui/Docs/Page/Details";
+
 import Variables from "@/app/ui/Docs/Page/Variables";
 import Values from "@/app/ui/Docs/Page/Values";
 import Functions from "@/app/ui/Docs/Page/Functions";
@@ -33,12 +35,7 @@ export default async function Page({ params, } : { params : Promise<{ id: string
             <h2>{id}</h2>
             <div className={styles.doc}>
                 <p>{data.summary}</p>
-                <br/>
-                <p>Header: {data.header}</p>
-                <p>Source: {data.source}</p>
-                <p>Namespace: {data.namespace}</p>
-                <p>Type: {data.type}</p>
-                <br/>
+                <Details data={data}/>
 
                 {data.variables && <Variables list={data.variables}/>}
                 {data.types && <Types list={data.types}/>}

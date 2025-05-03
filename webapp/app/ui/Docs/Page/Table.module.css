@@ -1,0 +1,31 @@
+.list {
+    width: 100%;
+    margin-bottom: 50px;
+    border-collapse: collapse;
+}
+
+.list th {
+    padding: 5px 10px;
+    background-color: var(--table-head-color);
+    border: var(--table-border-color) 1px solid;
+}
+
+.list tr {
+    background-color: var(--table-row-color);
+}
+.list tr:nth-child(2n) {
+    background-color: var(--table-row-color-secondary);
+}
+
+.list td {
+    padding: 5px 10px;
+    border: var(--table-border-color) 1px solid;
+}
+.name {
+    width: 33%;
+    font-size: 0.8rem;
+}
+.desc {
+    width: 67%;
+    font-size: 0.9rem;
+}

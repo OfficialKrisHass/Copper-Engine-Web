@@ -73,5 +73,10 @@ a:hover {
     --box-shadow-small: 0px 0px 8px rgba(0, 0, 0,0.5);
 
     --code-bg-color: #0a0a09;
+
+    --table-head-color: #0b0b08;
+    --table-row-color: #131311;
+    --table-row-color-secondary: #181815;
+    --table-border-color: #1f1f1c;
   }
 }
