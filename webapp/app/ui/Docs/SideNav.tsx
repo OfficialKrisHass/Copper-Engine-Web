@@ -1,13 +1,14 @@
 'use client'
 
-import SideNavEntry, { Data as EntryData } from "./SideNavEntry";
+import { Entry } from "./Types";
+import SideNavEntry from "./SideNavEntry";
 
 import { useState } from "react";
 
 import styles from "./SideNav.module.css"
 
 type Props = {
-    entries: EntryData[];
+    entries: Entry[];
 }
 
 export default function SideNav({ entries } : Props) {

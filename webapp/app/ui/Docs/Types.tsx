@@ -1,13 +1,23 @@
-export default function Types({ list } : { list: string[] }) {
+export type Entry = {
+    title: string;
+    subDirs?: Entry[];
+    entries?: string[];
+}
+export type Data = {
+    summary: string;
 
-    return (
-        <>
-            <h3>Types</h3>
-            {list.map(type => (
-                <p>{type}</p>
-            ))}
-            <br/>
-        </>
-    )
+    header: string;
+    source: string;
+    namespace: string;
+    type: string;
 
+    variables?: DataEntry[];
+    values?: DataEntry[];
+    functions?: DataEntry[];
+    defines?: DataEntry[];
+    types?: DataEntry[];
+}
+export type DataEntry = {
+    name: string;
+    description: string;
 }

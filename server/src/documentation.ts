@@ -1,4 +1,4 @@
-import type { EntryData, DocData } from "./types/Documentation.ts"
+import type { EntryData, DocData, DocDataEntry } from "./types/Documentation.ts"
 
 import fs, { promises } from "fs";
 import readline from "readline";
@@ -72,17 +72,24 @@ async function ProcessDoc(fullPath: string, title: string) : Promise<void> {
     }
 
     let data: DocData = {};
-    let arr: string[] | undefined = undefined;
+    let arr: DocDataEntry[] | undefined = undefined;
     for (let i: number = 0; i < lines.length; i++) {
 
-        const line: string = lines[i];
+        const line: string = lines[i].trim();
         if (arr) {
 
             if (line === "") continue;
             if (line[0] === '#')
                 arr = undefined;
-            else
-                arr.push(line);
+            else {
+
+                const sep = line.indexOf('#');
+                const name = line.substring(0, sep);
+                const description = line.substring(sep + 1);
+
+                arr.push({ name, description });
+
+            }
 
         }
 
@@ -93,6 +100,8 @@ async function ProcessDoc(fullPath: string, title: string) : Promise<void> {
             case "# Source": data.source = lines[++i]; break;
             case "# Namespace": data.namespace = lines[++i]; break;
             case "# Type": data.type = lines[++i]; break;
+            case "# Variables": data.variables = []; arr = data.variables; break;
+            case "# Values": data.values = []; arr = data.values; break;
             case "# Functions": data.functions = []; arr = data.functions; break;
             case "# Defines": data.defines = []; arr = data.defines; break;
             case "# Types": data.types = []; arr = data.types; break;

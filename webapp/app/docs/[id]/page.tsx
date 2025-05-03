@@ -1,23 +1,14 @@
-import Functions from "@/app/ui/Docs/Functions";
-import Defines from "@/app/ui/Docs/Defines";
-import Types from "@/app/ui/Docs/Types";
+import Variables from "@/app/ui/Docs/Page/Variables";
+import Values from "@/app/ui/Docs/Page/Values";
+import Functions from "@/app/ui/Docs/Page/Functions";
+import Defines from "@/app/ui/Docs/Page/Defines";
+import Types from "@/app/ui/Docs/Page/Types";
+
+import { Data } from "@/app/ui/Docs/Types"
 
 import { config } from "@/config";
 
 import styles from "./page.module.css"
-
-type Data = {
-    summary: string;
-
-    header: string;
-    source: string;
-    namespace: string;
-    type: string;
-
-    functions?: string[];
-    defines?: string[];
-    types?: string[];
-}
 
 export default async function Page({ params, } : { params : Promise<{ id: string }> }) {
 
@@ -49,9 +40,11 @@ export default async function Page({ params, } : { params : Promise<{ id: string
                 <p>Type: {data.type}</p>
                 <br/>
 
+                {data.variables && <Variables list={data.variables}/>}
+                {data.types && <Types list={data.types}/>}
+                {data.values && <Values list={data.values}/>}
                 {data.functions && <Functions list={data.functions}/>}
                 {data.defines && <Defines list={data.defines}/>}
-                {data.types && <Types list={data.types}/>}
             </div>
         </>
     )

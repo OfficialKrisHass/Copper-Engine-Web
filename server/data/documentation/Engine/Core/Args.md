@@ -11,7 +11,7 @@ Copper
 Namespace
 
 # Functions
-void Setup(uint32 argc, char* arv[])
-uint32 Count()
-const std::string& Get(uint32 index)
-const fs::path& ProjectPath()
+void Setup(uint32 argc, char* arv[])#Parses the command line arguments. Internal, gets called almost immediately at startup, DO NOT USE.
+uint32 Count()#Returns the number of arguments.
+const std::string& Get(uint32 index)#Returns the argument at the provided index.
+const fs::path& ProjectPath()#Only when CU_EDITOR is defined, returns the project to open, if one was provided.

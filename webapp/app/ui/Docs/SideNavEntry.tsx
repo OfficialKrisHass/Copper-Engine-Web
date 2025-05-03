@@ -1,14 +1,11 @@
+import { Entry } from "./Types";
+
 import Link from "next/link";
 
 import styles from "./SideNavEntry.module.css"
 
-export type Data = {
-    title: string;
-    subDirs?: Data[];
-    entries?: string[];
-}
 type Props = {
-    item: Data;
+    item: Entry;
     path: string;
     level?: number;
     openPaths: Record<string, boolean>;

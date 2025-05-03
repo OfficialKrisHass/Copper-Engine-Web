@@ -11,7 +11,13 @@ export type DocData = {
     namespace?: string;
     type?: string;
 
-    functions?: string[];
-    defines?: string[];
-    types?: string[];
+    variables?: DocDataEntry[];
+    values?: DocDataEntry[];
+    functions?: DocDataEntry[];
+    defines?: DocDataEntry[];
+    types?: DocDataEntry[];
+}
+export type DocDataEntry = {
+    name: string;
+    description: string;
 }
