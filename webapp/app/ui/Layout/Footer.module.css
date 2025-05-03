@@ -20,9 +20,22 @@
     text-align: right;
 }
 .socials a {
-    background-color: var(--base-color);
+    background-color: rgba(0, 0, 0, 0);
     aspect-ratio: 1/1;
     width: 4rem;
     margin-right: 15px;
     display: inline-block;
+}
+.socials a:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.hover {
+    display: none
+}
+.socials a:hover .normal {
+    display: none;
+}
+.socials a:hover .hover {
+    display: block;
 }

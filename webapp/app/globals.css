@@ -58,7 +58,7 @@ a:hover {
     --base-color: #100e0c;
     --base-color-secondary: #181311;
     --dark-color: #050504;
-    --dark-color-secondary: #050504;
+    --dark-color-secondary: #0b0b0a;
     --text-color: #ededed;
     --text-color-secondary: rgba(255, 128, 33, 255);
     --button-color: var(--dark-color-secondary);
