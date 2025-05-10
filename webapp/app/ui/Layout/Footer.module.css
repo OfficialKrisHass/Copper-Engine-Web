@@ -13,6 +13,8 @@
     grid-template-columns: 1fr 1fr;
 }
 .creditsAndSocials p {
+    font-size: 0.9rem;
+    font-weight: 100;
     max-width: 30vw;
 }
 

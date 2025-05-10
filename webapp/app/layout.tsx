@@ -6,16 +6,21 @@ import localFont from "next/font/local";
 
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const mainFont = localFont({
+    src: "./fonts/Roboto-VariableFont_wdth,wght.ttf",
+    variable: "--font-main",
+    weight: "100 900",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const titleFont = localFont({
+    src: "./fonts/Orbitron-VariableFont_wght.ttf",
+    variable: "--font-title",
+    weight: "100 900",
+})
+const subtitleFont = localFont({
+    src: "./fonts/Audiowide-Regular.ttf",
+    variable: "--font-subtitle",
+    weight: "100 900",
+})
 
 export const metadata: Metadata = {
   title: "Copper Engine",
@@ -29,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${mainFont.variable} ${titleFont.variable} ${subtitleFont.variable}`}>
         <Navbar/>
         {children}
         <Footer/>

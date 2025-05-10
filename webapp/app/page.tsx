@@ -10,8 +10,11 @@ export default function Home() {
   return (
     <main className={styles.page}>
       <div className={styles.hero}>
-        <h1>Copper Engine</h1>
-        <h2>The worst choice</h2>
+        <img src={"/screenshots/CopperPromotional.png"} alt="Copper Editor screenshot"/>
+        <div className={styles.heroText}>
+          <h1>Copper Engine</h1>
+          <h2>The worst choice</h2>
+        </div>
       </div>
       <section id="about" className={styles.container}>
         <h2>About</h2>
