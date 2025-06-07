@@ -23,8 +23,8 @@ const subtitleFont = localFont({
 })
 
 export const metadata: Metadata = {
-  title: "Copper Engine",
-  description: "Copper Engine website",
+  title: "Copper-Engine",
+  description: "Copper-Engine website",
 };
 
 export default function RootLayout({

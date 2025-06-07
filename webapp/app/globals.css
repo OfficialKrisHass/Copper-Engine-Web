@@ -81,5 +81,7 @@ a:hover {
     --table-row-color: #131311;
     --table-row-color-secondary: #181815;
     --table-border-color: #1f1f1c;
+
+    --page-full-height: calc(100vh - calc(2rem + 0.9rem));
   }
 }

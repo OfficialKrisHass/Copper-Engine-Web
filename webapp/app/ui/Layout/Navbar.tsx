@@ -5,11 +5,11 @@ export default function Navbar() {
 
   return (
     <header className={styles.navbar}>
-      <h1>Copper Engine</h1>
+      <h1>Copper-Engine</h1>
       <Link href="/">
         <p>Home</p>
       </Link>
-      <Link href="/#about">
+      <Link href="/about">
         <p>About</p>
       </Link>
       <Link href="/docs">

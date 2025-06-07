@@ -12,18 +12,23 @@ export default function Home() {
       <div className={styles.hero}>
         <img src={"/screenshots/CopperPromotional.png"} alt="Copper Editor screenshot"/>
         <div className={styles.heroText}>
-          <h1>Copper Engine</h1>
+          <h1>Copper-Engine</h1>
           <h2>The worst choice</h2>
         </div>
       </div>
       <section id="about" className={styles.container}>
         <h2>About</h2>
-        <p>Copper Engine is an open source 3D game engine developed by Kris Hass <small>(HI MOM!!!!)</small> with the current goal of creating a functional engine.
-        It is not meant to be a competitor to Unreal, Unity or Godot, instead it's an attempt at creating something, that could one day become one.</p>
+        <p>Copper-Engine is an open source 3D game engine developed by Kris Hass <small>(HI MOM!!!!)</small> with solid performance, security, users and gamers
+        as the main focus areas.</p>
         <br/>
-        <p>In it's current stage, Copper Engine is capable of creating games with it's C# Scripting Engine, simple but powerful 3D Renderer, and <Link href="/#features">many more</Link>, using
-        a professional level editor that comes prepackaged with the engine. Although the feature of building and distributing your games is not implemented, but planned
-        to be in the upcoming Beta 0.4 version.</p>
+        <p>In it's current stage, Copper-Engine is capable of creating simple games with it's C# Scripting Engine, simple but powerful 3D Renderer, Entity Component
+        System and <Link href="/#features">many more features</Link>. All of this is possible with the help of a professional level editor that comes prepackaged
+        with the engine.</p>
+        <br/>
+        <p>To learn more about our core concepts, values and plans.</p>
+        <div className={styles.more}>
+            <Link href="/about">Read More</Link>
+        </div>
       </section>
       <section className={styles.container}>
         <h2>What's New</h2>
