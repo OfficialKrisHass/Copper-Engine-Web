@@ -62,6 +62,8 @@ a:hover {
     --base-color-secondary: #181311;
     --dark-color: #050504;
     --dark-color-secondary: #0b0b0a;
+    --accent-color: #28a6f2;
+    --accent-color-secondary: #176ebb;
     --text-color: #ededed;
     --text-color-secondary: rgba(255, 128, 33, 255);
     --button-color: var(--dark-color-secondary);
@@ -70,6 +72,7 @@ a:hover {
 
     --base-color-hover: #151311;
     --base-color-secondary-hover: #1c1613;
+    --dark-color-hover: #080807;
     --button-color-hover: #e1781a;
 
     --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);

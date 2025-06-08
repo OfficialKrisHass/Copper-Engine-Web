@@ -4,7 +4,7 @@
 
 .header {
     background-color: var(--dark-color);
-    padding: 100px;
+    padding: 150px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,14 +19,6 @@
     font-weight: 400;
 }
 
-.selector {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-.selector p {
-    background-color: var(--dark-color-secondary);
-    border: 1px solid var(--table-border-color);
-    padding: 10px;
-    text-align: center;
+.container {
+    padding: 0px 50px;
 }

@@ -1,12 +1,12 @@
-import Details from "@/app/ui/Docs/Page/Details";
+import Details from "@/app/components/Docs/Page/Details";
 
-import Variables from "@/app/ui/Docs/Page/Variables";
-import Values from "@/app/ui/Docs/Page/Values";
-import Functions from "@/app/ui/Docs/Page/Functions";
-import Defines from "@/app/ui/Docs/Page/Defines";
-import Types from "@/app/ui/Docs/Page/Types";
+import Variables from "@/app/components/Docs/Page/Variables";
+import Values from "@/app/components/Docs/Page/Values";
+import Functions from "@/app/components/Docs/Page/Functions";
+import Defines from "@/app/components/Docs/Page/Defines";
+import Types from "@/app/components/Docs/Page/Types";
 
-import { Data } from "@/app/ui/Docs/Types"
+import { Data } from "@/app/components/Docs/Types"
 
 import { config } from "@/config";
 

@@ -1,5 +1,5 @@
-import ArticleList from "./ui/Articles/ArticleList";
-import FeatureList from "./ui/Features/FeatureList";
+import ArticleList from "./components/Articles/ArticleList";
+import FeatureList from "./components/Features/FeatureList";
 
 import Link from "next/link";
 

@@ -1,0 +1,22 @@
+.selector {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.selector a {
+    background-color: var(--dark-color-secondary);
+    color: var(--text-color);
+    border: 1px solid var(--table-border-color);
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.selector a:hover {
+    background-color: var(--dark-color-hover);
+    border-bottom-color: var(--accent-color);
+    border-bottom-width: 2px;
+}
+.selector .selected {
+    border-bottom-color: var(--accent-color-secondary);
+    border-bottom-width: 2px;
+}

@@ -1,7 +1,7 @@
 import { config } from "@/config";
 
-import { Entry } from "../ui/Docs/Types";
-import SideNav from "../ui/Docs/SideNav"
+import { Entry } from "../components/Docs/Types";
+import SideNav from "../components/Docs/SideNav"
 
 import styles from "./layout.module.css"
 

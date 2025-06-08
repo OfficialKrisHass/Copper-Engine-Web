@@ -1,5 +1,5 @@
-import Navbar from "./ui/Layout/Navbar";
-import Footer from "./ui/Layout/Footer";
+import Navbar from "./components/Layout/Navbar";
+import Footer from "./components/Layout/Footer";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
