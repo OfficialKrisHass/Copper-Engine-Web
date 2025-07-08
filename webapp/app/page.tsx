@@ -18,8 +18,8 @@ export default function Home() {
       </div>
       <section id="about" className={styles.container}>
         <h2>About</h2>
-        <p>Copper-Engine is an open source 3D game engine developed by Kris Hass <small>(HI MOM!!!!)</small> with solid performance, security, users and gamers
-        as the main focus areas.</p>
+        <p>Copper-Engine is an open source 3D game engine developed by Kris Hass <small>(HI MOM!!!!)</small> with solid performance, users and gamers as the main
+        focus areas.</p>
         <br/>
         <p>In it's current stage, Copper-Engine is capable of creating simple games with it's C# Scripting Engine, simple but powerful 3D Renderer, Entity Component
         System and <Link href="/#features">many more features</Link>. All of this is possible with the help of a professional level editor that comes prepackaged
@@ -27,22 +27,20 @@ export default function Home() {
         <br/>
         <p>To learn more about our core concepts, values and plans.</p>
         <div className={styles.more}>
-            <Link href="/about">Read More</Link>
+            <Link href="/about?view=overview">Read More</Link>
         </div>
       </section>
       <section className={styles.container}>
         <h2>What's New</h2>
         <div className={styles.newsContainer}>
-          <Link href="/article/latest">
-            <article className={styles.latest}>
-              <div className={styles.thumbnail}>
-              </div>
-              <div className={styles.info}>
-                <h3>Latest article title</h3>
-                <p>Here I will have to put the text of the newest article, but somehow clip it so that it won't show
-                in it's entirety but cut off at some point, okay I don't know what to say anymore</p>
-              </div>
-            </article>
+          <Link href="/article/latest" className={styles.latest}>
+            <div className={styles.thumbnail}>
+            </div>
+            <div className={styles.info}>
+              <h3>Latest article title</h3>
+              <p>Here I will have to put the text of the newest article, but somehow clip it so that it won't show
+                 in it's entirety but cut off at some point, okay I don't know what to say anymore</p>
+            </div>
           </Link>
           <ArticleList/>
           <div className={styles.more}>

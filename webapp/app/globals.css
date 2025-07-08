@@ -42,12 +42,10 @@ small {
 }
 
 a {
-  background-color: var(--button-color);
-  color: var(--text-color-secondary);
-  text-decoration: none;
+  color: var(--link-color);
 }
 a:hover {
-    background-color: var(--button-color-hover);
+    color: var(--link-color-hover);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -65,8 +63,11 @@ a:hover {
     --accent-color: #28a6f2;
     --accent-color-secondary: #176ebb;
     --text-color: #ededed;
-    --text-color-secondary: rgba(255, 128, 33, 255);
+    --text-color-secondary: #ff8121;
     --button-color: var(--dark-color-secondary);
+
+    --link-color: var(--text-color-secondary);
+    --link-color-hover: #e8711a;
         
     --navbar-base-color: rgba(20, 19, 17, 255);
 

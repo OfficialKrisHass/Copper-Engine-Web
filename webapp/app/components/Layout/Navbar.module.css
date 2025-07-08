@@ -25,6 +25,11 @@
   padding: 0.9rem 50px;
   font-size: 2rem;
   text-align: center;
+  text-decoration: none;
+}
+.navbar a:hover {
+    background-color: var(--button-color-hover);
+    color: var(--text-color);
 }
 .navbar p {
     font-weight: 500;

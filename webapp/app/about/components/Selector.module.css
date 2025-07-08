@@ -1,7 +1,7 @@
 .selector {
     padding: 50px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
 }
 .selector a {
     background-color: var(--dark-color-secondary);
@@ -10,6 +10,7 @@
     padding: 10px;
     text-align: center;
     font-size: 0.9rem;
+    text-decoration: none;
 }
 .selector a:hover {
     background-color: var(--dark-color-hover);

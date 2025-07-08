@@ -9,4 +9,5 @@
 .entry a {
     color: var(--text-color);
     background-color: var(--base-color);
+    text-decoration: none;
 }

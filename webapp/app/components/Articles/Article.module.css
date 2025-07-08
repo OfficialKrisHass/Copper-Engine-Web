@@ -2,9 +2,11 @@
     color: var(--text-color);
     border-radius: 12px;
     padding: 5px;
+    text-decoration: none;
 }
 .article:hover {
     background-color: var(--base-color-hover);
+    color: var(--text-color);
 }
 
 .thumbnail {
