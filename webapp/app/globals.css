@@ -40,6 +40,15 @@ p {
 small {
     font-size: 0.8rem;
 }
+blockquote {
+    padding: 0px 30px;
+    font-size: 1rem;
+    font-weight: 275;
+}
+
+ul {
+    padding: 0px 15px;
+}
 
 a {
   color: var(--link-color);

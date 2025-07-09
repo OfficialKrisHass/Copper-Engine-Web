@@ -8,12 +8,14 @@ export default function Overview() {
             <p>Copper-Engine is an open source 3D game engine written in C++. It's main focus lies on creating solid performance, satisfying gamers and providing
                an easy to use, powerful and most of all, trustworthy tool to it's users.</p>
             <br/>
+
             <h3>Origins</h3>
             <p>The project officialy started on the 1st of August 2022, however attempts were made as early as <Link href="https://github.com/OfficialKrisHass/Copper-Engine-Old">May 2nd 2022</Link>.
                Originally it started as a hobby project for Kris to gain more experience and knowledge in game development and how games work, with the plan to
                later become a base for a proprietary game engine for Copper Games, a game studio led by Kris. And after 2 rewrites and restarts, the repository for
                the current Copper-Engine was created, development started and over time, the <Link href="/about?view=ethos">Copper Ethos</Link> was born.</p>
             <br/>
+
             <h3>Our beliefs</h3>
             <p>We believe that games are an art-form, and like any other art-form, throwing millions of dollars into it, and bringing on massive teams, do not
                guarantee a good game, interpret that as a stab at someone (or something) if you must. With art-form comes the aspect of good, life changing results
@@ -23,6 +25,7 @@ export default function Overview() {
                dollar company, doesn't mean the game is perfect. What makes a game perfect is the hard working developers dedicating their time to a project they
                love, whether that time is spent doing hard, gut-wrenching tasks or not.</p>
             <br/>
+
             <h3>Who is Copper-Engine for ?</h3>
             <p>Copper-Engine is meant for absolutely anyone, experienced or not, young or old, AAA or indie, black or white, male or female, absolutely, anyone.</p>
             <br/>
