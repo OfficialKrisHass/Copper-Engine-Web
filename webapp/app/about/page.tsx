@@ -8,8 +8,11 @@ export default async function About() {
     return (
         <main className={styles.main}>
             <div className={styles.header}>
-                <h1>About</h1>
-                <h2>Learn more about Copper-Engine</h2>
+                <img src={"/screenshots/CopperPromotional.png"} alt="Copper Editor screenshot"/>
+                <div className={styles.headerText}>
+                    <h1>About</h1>
+                    <h2>Learn more about Copper-Engine</h2>
+                </div>
             </div>
             <Selector/>
             <div className={styles.container}>

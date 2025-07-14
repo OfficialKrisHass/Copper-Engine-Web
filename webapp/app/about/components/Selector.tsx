@@ -17,6 +17,7 @@ export default function Selector() {
             <Link href="/about?view=ethos" className={view === "ethos" ? styles.selected : undefined}>Ethos</Link>
             <Link href="/about?view=features" className={view === "features" ? styles.selected : undefined}>Features</Link>
             <Link href="/about?view=tech-stack" className={view === "tech-stack" ? styles.selected : undefined}>Tech stack</Link>
+            <Link href="/about?view=donations" className={view === "donations" ? styles.selected : undefined}>Donations</Link>
             <Link href="/about?view=future" className={view === "future" ? styles.selected : undefined}>Future</Link>
             <Link href="/about?view=faq" className={view === "faq" ? styles.selected : undefined}>FAQ</Link>
         </div>

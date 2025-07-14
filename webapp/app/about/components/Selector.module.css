@@ -1,7 +1,7 @@
 .selector {
     padding: 50px;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
 }
 .selector a {
     background-color: var(--dark-color-secondary);
@@ -9,15 +9,17 @@
     border: 1px solid var(--table-border-color);
     padding: 10px;
     text-align: center;
-    font-size: 0.9rem;
     text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: var(--font-subtitle);
 }
 .selector a:hover {
     background-color: var(--dark-color-hover);
-    border-bottom-color: var(--accent-color);
+    border-bottom-color: var(--accent-color-secondary);
     border-bottom-width: 2px;
 }
 .selector .selected {
-    border-bottom-color: var(--accent-color-secondary);
+    border-bottom-color: var(--accent-color);
     border-bottom-width: 2px;
 }

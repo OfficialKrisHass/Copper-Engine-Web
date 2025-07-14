@@ -40,10 +40,17 @@ p {
 small {
     font-size: 0.8rem;
 }
+
 blockquote {
     padding: 0px 30px;
     font-size: 1rem;
     font-weight: 275;
+}
+cite {
+    display: block;
+    text-align: right;
+    padding: 0px 30px;
+    padding-top: 5px;
 }
 
 ul {
