@@ -20,21 +20,25 @@ export default function Overview() {
             <br/>
 
             <h3 id="beliefs">Our beliefs</h3>
-            <p>We believe that games are an art-form, and like any other art-form, throwing millions of dollars into it, and bringing on massive teams, do not
-               guarantee a good game. Interpret that as a stab at someone (or something) if you must but as with any art-form comes the aspect of good, life changing
-               results taking time and dedication. Or in other words, great things are hard to make</p>
+            <p>We believe that games are an art-form, and like any other art-form, it takes talent and dedication. Throwing millions of dollars into it, and bringing
+               on massive teams, do not guarantee a good game. Interpret that as a stab at someone (or something) if you must. And like any other art, games are
+               capable of delivering incredible, life changing experiences that can shape someones life.</p>
             <br/>
-            <p>What we mean by that is that just because the engine used to make a game has astounding graphics, or the studio behind it is a AAA multi billion
-               dollar company, doesn't automatically mean the game will be perfect. What makes a game perfect are the hard working developers dedicating their time
-               and money to a project they love, whether that time is spent doing hard, gut-wrenching tasks or not.</p>
+            <p>We also believe that game development should be accessible to anyone, anywhere. As we stated previously, games are art, and game development is
+               a way of expressing yourself, and anyone should be able to do that. You shouldn't need thousands, hundreds, not even tens of dollars just to
+               produce and share something with the world. For that reason, we believe game development tools and guides should be free and easilly accessible,
+               not being locked behind a paywall, or gatekept.</p>
+            <br/>
+            <p>For more of our beliefs and views, check out the <Link href="/about?view=ethos">Copper Ethos</Link></p>
             <br/>
 
             <h3 id="who-for">Who is Copper-Engine for ?</h3>
-            <p>Copper-Engine is meant for absolutely anyone, experienced or not, young or old, AAA or indie, black or white, male or female, absolutely, anyone.</p>
+            <p>Copper-Engine is meant for absolutely anyone of any levels of exprience, status, race or gender. In other words, absolutely, anyone.</p>
             <br/>
-            <p>However at the moment, due to the new, uncharted nature of the engine, the best demographic are experimentative developers, who don't mind working with
-               minimal tutorials and documentation, possibly helping create said tutorials or documentation. Developers who have an interest in game engine architecture
-               or are looking to get into the topic are going to have an easier time using the engine, compared to new, inexperienced developers.</p>
+            <p>However at the moment, due to the new, uncharted nature of the engine, the best demographic are experimentative developers, interested in game engine
+               architecture or lookng to get into the topic. Developers who don't mind working with
+               minimal tutorials and documentation, possibly even helping create said tutorials or documentation.</p>
+            <br/>
         </>
     );
 

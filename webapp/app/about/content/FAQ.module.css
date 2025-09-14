@@ -1,0 +1,8 @@
+.question {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+.answer {
+    margin-top: 5px;
+    margin-left: 16px; 
+}

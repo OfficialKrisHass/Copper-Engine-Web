@@ -1,7 +1,7 @@
 .selector {
     padding: 50px;
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
 }
 .selector a {
     background-color: var(--dark-color-secondary);

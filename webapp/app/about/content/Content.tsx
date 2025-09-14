@@ -2,8 +2,9 @@
 
 import Overview from "./Overview";
 import Ethos from "./Ethos";
-import Features from "./Features";
+import TechStack from "./TechStack";
 import Donations from "./Donations";
+import FAQ from "./FAQ";
 
 import { useSearchParams } from "next/navigation"
 
@@ -17,8 +18,9 @@ export default function Content() {
         case null:
         case "overview": return <Overview/>;
         case "ethos": return <Ethos/>
-        case "features": return <Features/>;
+        case "tech-stack": return <TechStack/>;
         case "donations": return <Donations/>
+        case "faq": return <FAQ/>;
         default: return <p>Invalid option!</p>;
 
     }
