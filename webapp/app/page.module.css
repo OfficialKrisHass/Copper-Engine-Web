@@ -89,7 +89,7 @@
 }
 
 .latest {
-    background-color: var(--base-color-secondary);
+    background-color: var(--card-color);
     border-radius: 12px;
     padding: 15px;
     box-shadow: var(--box-shadow);
@@ -99,7 +99,7 @@
     text-decoration: none;
 }
 .latest:hover {
-    background-color: var(--base-color-secondary-hover);
+    background-color: var(--card-color-hover);
 }
 .thumbnail {
     background-color: var(--dark-color);

@@ -26,8 +26,9 @@ export default function Home() {
         with the engine.</p>
         <br/>
         <p>To learn more about our core concepts, values and plans.</p>
+        <br/>
         <div className={styles.more}>
-            <Link href="/about?view=overview">Read More</Link>
+            <Link href="/about?view=overview">Learn More</Link>
         </div>
       </section>
       <section className={styles.container}>

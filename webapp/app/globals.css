@@ -73,9 +73,10 @@ a:hover {
 @media (prefers-color-scheme: dark) {
   :root {
     --base-color: #100e0c;
-    --base-color-secondary: #181311;
+    --base-color-secondary: #131211;
     --dark-color: #050504;
     --dark-color-secondary: #0b0b0a;
+    --card-color: #181311;
     --accent-color: #28a6f2;
     --accent-color-secondary: #176ebb;
     --text-color: #ededed;
@@ -90,6 +91,7 @@ a:hover {
     --base-color-hover: #151311;
     --base-color-secondary-hover: #1c1613;
     --dark-color-hover: #080807;
+    --card-color-hover: #1c1613;
     --button-color-hover: #e1781a;
 
     --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
