@@ -34,15 +34,6 @@ export default function Home() {
       <section className={styles.container}>
         <h2>What's New</h2>
         <div className={styles.newsContainer}>
-          <Link href="/article/latest" className={styles.latest}>
-            <div className={styles.thumbnail}>
-            </div>
-            <div className={styles.info}>
-              <h3>Latest article title</h3>
-              <p>Here I will have to put the text of the newest article, but somehow clip it so that it won't show
-                 in it's entirety but cut off at some point, okay I don't know what to say anymore</p>
-            </div>
-          </Link>
           <ArticleList/>
           <div className={styles.more}>
             <Link href="/blog">Read more</Link>
