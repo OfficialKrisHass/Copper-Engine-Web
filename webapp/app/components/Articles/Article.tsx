@@ -12,7 +12,7 @@ type Props = {
 export default function Article({ article } : Props) {
 
   return (
-    <Link href={"/article/" + article.title} className={styles.article} key={article.title}>
+    <Link href={"/article/" + article.url} className={styles.article} key={article.title}>
       <div className={styles.thumbnail}>
       </div>
       <div className={styles.info}>

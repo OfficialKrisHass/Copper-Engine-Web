@@ -1,4 +1,5 @@
 export type ArticleData = {
     title: string;
+    url: string;
     created: number;
 }

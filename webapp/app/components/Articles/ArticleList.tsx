@@ -16,10 +16,11 @@ type Articles = {
 export default async function ArticleList() {
 
     const articles = await GetArticles();
+    const recent = articles.entries.slice(0, 3);
 
     return (
         <>
-            <Link href={"/article/" + articles.latest?.title} className={styles.latest}>
+            <Link href={"/article/" + articles.latest?.url} className={styles.latest}>
             <div className={styles.thumbnail}/>
             <div className={styles.info}>
               <h3>{articles.latest?.title}</h3>
@@ -28,7 +29,7 @@ export default async function ArticleList() {
             </div>
             </Link>
             <div className={styles.articleList}>
-                {articles.entries.map((article) =>
+                {recent.map((article) =>
                     <Article article={article}/>
                 )}
             </div>
@@ -50,8 +51,12 @@ async function GetArticles() : Promise<Articles> {
         const stats = await fs.stat(path.join(articlesPath, file));
         if (!stats.isFile() || path.extname(file) != ".md") continue;
 
+        const url = path.parse(file).name;
+        const title = url.replaceAll('-', ' ');
+
         articles.push({
-            title: path.parse(file).name,
+            title: title,
+            url: url,
             created: stats.birthtime.getTime()
         });
 
