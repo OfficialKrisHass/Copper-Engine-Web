@@ -1,15 +1,22 @@
+import { ArticleData } from "./Types"
+
 import Link from "next/link"
 
 import styles from "./Article.module.css"
 
-export default function Article() {
+type Props = {
+
+    article: ArticleData;
+
+}
+export default function Article({ article } : Props) {
 
   return (
-    <Link href="/article" className={styles.article}>
+    <Link href={"/article/" + article.title} className={styles.article} key={article.title}>
       <div className={styles.thumbnail}>
       </div>
       <div className={styles.info}>
-        <h3>Article title</h3>
+        <h3>{article.title}</h3>
         <p> Article description yada yada yada yada bla bla lorem ipsum es dolores que pala sashdkjahsk</p>
       </div>
     </Link>

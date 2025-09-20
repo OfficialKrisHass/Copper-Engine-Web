@@ -31,6 +31,7 @@ export default async function Page({ params } : { params : Promise<{ article: st
 
     if (!exists) {
 
+        console.log(`article ${fullPath} does not exist`)
         return (
             <NotFound/>
         );
