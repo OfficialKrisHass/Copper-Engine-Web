@@ -4,6 +4,8 @@ import { ArticleData } from "./Types"
 import Link from "next/link"
 import Image from "next/image"
 
+import { cache } from "react"
+
 import matter from "gray-matter"
 
 import fs from "fs/promises"
@@ -11,15 +13,12 @@ import path from "path"
 
 import styles from "./ArticleList.module.css"
 
-type Articles = {
-    latest: ArticleData | undefined;
-    articles: ArticleData[];
-}
-
 export default async function ArticleList() {
 
-    const { latest, articles } = await GetArticles();
-    const recent = articles.slice(0, 3);
+    const articles = await GetArticles();
+
+    const latest = articles.at(0);
+    const recent = articles.slice(1, 4);
 
     return (
         <>
@@ -45,7 +44,7 @@ export default async function ArticleList() {
 
 }
 
-async function GetArticles() : Promise<Articles> {
+async function GetArticles() : Promise<ArticleData[]> {
 
     const articlesPath = path.join(process.cwd(), "public/articles");
 
@@ -75,8 +74,13 @@ async function GetArticles() : Promise<Articles> {
 
     }
     articles.sort((a, b) => b.created - a.created);
-    const latest = articles.shift();
 
-    return { latest, articles };
+    return articles;
 
 }
+
+export const GetArticlesCached = cache(async () => {
+
+    return await GetArticles();
+
+});

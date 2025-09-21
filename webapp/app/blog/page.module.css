@@ -1,0 +1,17 @@
+.main {
+    width: 1200px;
+    max-width: 95vw;
+    min-height: 80vh;
+    margin: auto;
+    padding: 30px 0px;
+}
+.main h1 {
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}

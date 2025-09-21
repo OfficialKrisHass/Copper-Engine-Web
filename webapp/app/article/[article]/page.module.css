@@ -1,6 +1,6 @@
 .main {
     width: 1200px;
-    max-width: 1200px;
+    max-width: 95vw;
     margin: auto;
 }
 .main h1, .main h2, .main h3, .main h4 {
