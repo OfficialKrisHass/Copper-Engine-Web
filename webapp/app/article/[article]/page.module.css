@@ -16,6 +16,20 @@
     margin: auto;
 }
 
+.thumbnail {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-small);
+    overflow: hidden;
+}
+.thumbnail img {
+    object-fit: cover;
+    object-position: center;
+}
+
 .article p, .article h1, .article h2, .article h3, .article h4 {
     margin-top: 10px;
     margin-bottom: 20px;

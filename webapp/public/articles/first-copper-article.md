@@ -1,4 +1,9 @@
-# First Copper Article
+---
+title: First Copper article
+summary: The first Copper article. Contains all of the markdown formatting to test out the looks and functionality.
+thumbnail: /screenshots/CopperPromotional.png
+---
+
 Welcome to the first article on the Copper-Engine website. This one serves more as a test of the system and if it's working.
 
 Following this there will be a bunch of random stuff to test and configure the look of different formatting options.

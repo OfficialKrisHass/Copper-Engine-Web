@@ -1,12 +1,15 @@
 import NotFound from "@/app/not-found";
 
+import Image from "next/image";
+
 import ReactMarkdown from "react-markdown"
 import remarkGfm from "remark-gfm";
 
-import styles from "./page.module.css"
-
 import { promises as fs } from "fs"
 import path from "path";
+import matter from "gray-matter";
+
+import styles from "./page.module.css"
 
 async function ArticleExists(articlePath: string) {
 
@@ -38,14 +41,19 @@ export default async function Page({ params } : { params : Promise<{ article: st
 
     }
 
-    const contents = await fs.readFile(fullPath, "utf8");
+    const raw = await fs.readFile(fullPath, "utf8");
+    const { data, content } = matter(raw);
 
     return (
         <main className={styles.main}>
             <article className={styles.container}>
                 <div className={styles.article}>
+                    <div className={styles.thumbnail}>
+                        <Image src={data.thumbnail} alt="Article thumbnail" fill={true}/>
+                    </div>
+                    <h1>{data.title}</h1>
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
-                        {contents}
+                        {content}
                     </ReactMarkdown>
                 </div>
             </article>

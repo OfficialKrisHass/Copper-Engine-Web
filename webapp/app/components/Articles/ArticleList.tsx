@@ -2,35 +2,41 @@ import Article from "./Article"
 import { ArticleData } from "./Types"
 
 import Link from "next/link"
+import Image from "next/image"
 
-import styles from "./ArticleList.module.css"
+import matter from "gray-matter"
 
 import fs from "fs/promises"
 import path from "path"
 
+import styles from "./ArticleList.module.css"
+
 type Articles = {
     latest: ArticleData | undefined;
-    entries: ArticleData[];
+    articles: ArticleData[];
 }
 
 export default async function ArticleList() {
 
-    const articles = await GetArticles();
-    const recent = articles.entries.slice(0, 3);
+    const { latest, articles } = await GetArticles();
+    const recent = articles.slice(0, 3);
 
     return (
         <>
-            <Link href={"/article/" + articles.latest?.url} className={styles.latest}>
-            <div className={styles.thumbnail}/>
-            <div className={styles.info}>
-              <h3>{articles.latest?.title}</h3>
-              <p>Here I will have to put the text of the newest article, but somehow clip it so that it won't show
-                 in it's entirety but cut off at some point, okay I don't know what to say anymore</p>
-            </div>
-            </Link>
+            {latest && 
+                <Link href={"/article/" + latest.url} className={styles.latest}>
+                    <div className={styles.thumbnail}>
+                        <Image src={latest.thumbnail} alt="Latest article thumbnail" fill={true}/>
+                    </div>
+                    <div className={styles.info}>
+                      <h3>{latest.title}</h3>
+                      <p>{latest.summary}</p>
+                    </div>
+                </Link>
+            }
             <div className={styles.articleList}>
                 {recent.map((article) =>
-                    <Article article={article}/>
+                    <Article article={article} key={article.url}/>
                 )}
             </div>
         </>
@@ -48,22 +54,29 @@ async function GetArticles() : Promise<Articles> {
 
     for (const file of files) {
 
-        const stats = await fs.stat(path.join(articlesPath, file));
+        const filePath = path.join(articlesPath, file);
+
+        const stats = await fs.stat(filePath);
         if (!stats.isFile() || path.extname(file) != ".md") continue;
 
-        const url = path.parse(file).name;
-        const title = url.replaceAll('-', ' ');
+        const raw = await fs.readFile(filePath, "utf-8");
+        const { data, content } = matter(raw);
 
         articles.push({
-            title: title,
-            url: url,
-            created: stats.birthtime.getTime()
+            title: data.title,
+            thumbnail: data.thumbnail,
+            url: path.parse(file).name,
+
+            created: stats.birthtime.getTime(),
+
+            summary: data.summary,
+            content: content,
         });
 
     }
     articles.sort((a, b) => b.created - a.created);
     const latest = articles.shift();
 
-    return { latest, entries: articles };
+    return { latest, articles };
 
 }
