@@ -12,6 +12,9 @@ export default function Navbar() {
       <Link href="/about?view=overview">
         <p>About</p>
       </Link>
+      <Link href="/blog">
+        <p>Blog</p>
+      </Link>
       <Link href="/docs">
         <p>Documentation</p>
       </Link>

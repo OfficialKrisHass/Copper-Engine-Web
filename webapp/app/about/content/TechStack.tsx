@@ -18,6 +18,7 @@ export default function TechStack() {
             <h3>Renderer</h3>
             <ul>
                 <li><p><b>OpenGL</b> - Rendering backend. Support for DirectX and Vulkan is currently not available, but planned for a future release.</p></li>
+                <li><p><b>Glad</b> - OpenGL loader.</p></li>
                 <li><p><b>GLFW</b> - Window creation.</p></li>
                 <li><p><b>ImGui</b> - UI interface. Planned to be replaced by a custom UI system.</p></li>
             </ul>

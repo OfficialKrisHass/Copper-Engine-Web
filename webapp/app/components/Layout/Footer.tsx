@@ -19,6 +19,10 @@ export default function Footer() {
                             <Image className={styles.normal} src={"/icons/twitter.svg"} alt="Github icon" width={64} height={64}/> 
                             <Image className={styles.hover} src={"/icons/twitter-hover.svg"} alt="Github icon" width={64} height={64}/>
                         </Link>
+                        <Link href="https://bsky.app/profile/copperengine.bsky.social">
+                            <Image className={styles.normal} src={"/icons/bluesky.svg"} alt="Github icon" width={64} height={64}/> 
+                            <Image className={styles.hover} src={"/icons/bluesky-hover.svg"} alt="Github icon" width={64} height={64}/>
+                        </Link>
                         <Link href="mailto:copper.engine.contact@gmail.com">
                             <Image className={styles.normal} src={"/icons/gmail.svg"} alt="Github icon" width={64} height={64}/>
                             <Image className={styles.hover} src={"/icons/gmail-hover.svg"} alt="Github icon" width={64} height={64}/>

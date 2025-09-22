@@ -43,9 +43,9 @@ export default function Home() {
       <section id="features" className={styles.container}>
         <h2>Features</h2>
         <FeatureList/>
-        <div className={styles.more}>
+        {/*<div className={styles.more}>
           <Link href="/features">More features</Link>
-        </div>
+        </div>*/}
       </section>
       <section className={styles.container}>
         <h2>Contribute</h2>
