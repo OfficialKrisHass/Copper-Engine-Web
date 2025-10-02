@@ -1,17 +1,27 @@
 .card {
     background-color: var(--card-color);
     padding: 20px;
+    margin: 15px;
+    flex: 0 0 calc(33.33% - 30px);
     border-radius: 15px;
     box-shadow: var(--box-shadow);
 }
 
 .thumbnail {
-    background-color: var(--base-color);
-    border-radius: 12px;
+    position: relative;
+    width: 100%;
     aspect-ratio: 16/9;
+    border-radius: 12px;
     box-shadow: var(--box-shadow-small);
+    overflow: hidden;
+}
+.thumbnail img {
+    object-fit: cover;
+    object-position: center;
 }
 
 .info {
-    padding: 20px 10px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-align: center;
 }
