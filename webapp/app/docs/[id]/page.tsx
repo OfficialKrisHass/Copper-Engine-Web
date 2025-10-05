@@ -1,6 +1,6 @@
-import { GetDoc } from "@/app/components/Docs/DocList";
+import { GetDoc, GetDocTreeCached } from "@/app/components/Docs/DocList";
 
-import { DocData } from "@/app/components/Docs/Types"
+import { DocData, DocTreeNode } from "@/app/components/Docs/Types"
 
 import NotFound from "@/app/not-found";
 
@@ -40,13 +40,32 @@ export default async function Page({ params, } : { params : Promise<{ id: string
 
 export async function generateStaticParams() {
 
-    return [
-        {
-            id: "engine",
-        },
-        {
-            id: "window",
-        },
-    ];
+    type Params = { id: string };
+
+    const ret: Params[] = [];
+    function walk(node : DocTreeNode | undefined) {
+
+        if (!node) return;
+        if (node.subDirs) {
+
+            for (const dir of node.subDirs) { walk(dir); }
+
+        }
+        if (node.entries) {
+
+            for (const entry of node.entries) {
+
+                ret.push({ id: node.path + '.' + entry });
+
+            }
+
+        }
+
+    }
+
+    const tree: DocTreeNode | undefined = await GetDocTreeCached();
+    walk(tree);
+
+    return ret;
 
 }

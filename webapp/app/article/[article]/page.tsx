@@ -1,5 +1,9 @@
 import NotFound from "@/app/not-found";
 
+import { ArticleData } from "@/app/components/Articles/Types";
+
+import { GetArticlesCached } from "@/app/components/Articles/ArticleList";
+
 import Image from "next/image";
 
 import ReactMarkdown from "react-markdown"
@@ -59,5 +63,22 @@ export default async function Page({ params } : { params : Promise<{ article: st
             </article>
         </main>
     )
+
+}
+
+export async function generateStaticParams() {
+
+    type Params = { article: string };
+
+    const data: ArticleData[] = await GetArticlesCached();
+    const ret: Params[] = [];
+
+    for (const article of data) {
+
+        ret.push({ article: article.url });
+
+    }
+
+    return ret;
 
 }

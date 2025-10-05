@@ -1,3 +1,4 @@
+import { Suspense } from "react"
 import Selector from "./components/Selector"
 import Content from "./content/Content"
 
@@ -14,9 +15,13 @@ export default async function About() {
                     <h2>Learn more about Copper-Engine</h2>
                 </div>
             </div>
-            <Selector/>
+            <Suspense fallback={<p>Loading...</p>}>
+                <Selector/>
+            </Suspense>
             <div className={styles.container}>
-                <Content/>
+                <Suspense fallback={<p>Loading...</p>}>
+                    <Content/>
+                </Suspense>
             </div>
         </main>
     )
