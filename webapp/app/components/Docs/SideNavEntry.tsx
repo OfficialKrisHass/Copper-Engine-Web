@@ -1,11 +1,11 @@
-import { Entry } from "./Types";
+import { DocTreeNode } from "./Types";
 
 import Link from "next/link";
 
 import styles from "./SideNavEntry.module.css"
 
 type Props = {
-    item: Entry;
+    item: DocTreeNode;
     path: string;
     level?: number;
     openPaths: Record<string, boolean>;
@@ -21,13 +21,13 @@ export default function SideNavEntry({ item, path, level = 0, openPaths, toggleP
     const isToggleable = hasChildren || hasEntries;
 
     return (
-        <li className={styles.entry} key={item.title}>
-            <span className={styles.title} onClick={() => isToggleable && togglePath(path)}>{item.title}</span>
+        <li className={styles.entry} key={item.name}>
+            <span className={styles.title} onClick={() => isToggleable && togglePath(path)}>{item.name}</span>
             { isOpen && (
                 <ul>
                     {hasChildren && item.subDirs!.map((subDir, index) => {
 
-                        const childPath = `${path}/${subDir.title}`;
+                        const childPath = `${path}/${subDir.name}`;
                         return (
                             <SideNavEntry key={index} item={subDir} path={childPath} level={level + 1} openPaths={openPaths} togglePath={togglePath}/>
                         );
@@ -35,7 +35,7 @@ export default function SideNavEntry({ item, path, level = 0, openPaths, toggleP
                     })}
                     {hasEntries && item.entries!.map(entry => (
                         <li className={styles.entry} key={entry}>
-                            <Link href={"/docs/" + item.title + '.' + entry}>{entry}</Link>
+                            <Link href={"/docs/" + item.path + '.' + entry}>{entry}</Link>
                         </li>
                     ))}
                 </ul>

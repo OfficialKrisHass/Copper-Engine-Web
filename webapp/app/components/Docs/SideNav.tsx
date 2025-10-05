@@ -1,6 +1,7 @@
 'use client'
 
-import { Entry } from "./Types";
+import { DocTreeNode } from "./Types";
+
 import SideNavEntry from "./SideNavEntry";
 
 import { useState } from "react";
@@ -8,10 +9,10 @@ import { useState } from "react";
 import styles from "./SideNav.module.css"
 
 type Props = {
-    entries: Entry[];
+    docTree: DocTreeNode | undefined;
 }
 
-export default function SideNav({ entries } : Props) {
+export default function SideNav({ docTree } : Props) {
 
     const [openPaths, setOpenPaths] = useState<Record<string, boolean>>({});
 
@@ -27,8 +28,8 @@ export default function SideNav({ entries } : Props) {
             <h3>Table of Contents</h3>
             <hr/>
             <ul>
-                {entries.map((entry, index) =>
-                    <SideNavEntry key={index} item={entry} path={entry.title} openPaths={openPaths} togglePath={togglePath}/>
+                {docTree?.subDirs && docTree.subDirs.map((entry, index) =>
+                    <SideNavEntry key={index} item={entry} path={entry.name} openPaths={openPaths} togglePath={togglePath}/>
                 )}
             </ul>
         </aside>

@@ -1,14 +1,11 @@
-import Details from "@/app/components/Docs/Page/Details";
+import { GetDoc } from "@/app/components/Docs/DocList";
 
-import Variables from "@/app/components/Docs/Page/Variables";
-import Values from "@/app/components/Docs/Page/Values";
-import Functions from "@/app/components/Docs/Page/Functions";
-import Defines from "@/app/components/Docs/Page/Defines";
-import Types from "@/app/components/Docs/Page/Types";
+import { DocData } from "@/app/components/Docs/Types"
 
-import { Data } from "@/app/components/Docs/Types"
+import NotFound from "@/app/not-found";
 
-import { config } from "@/config";
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm";
 
 import styles from "./page.module.css"
 
@@ -16,16 +13,13 @@ export default async function Page({ params, } : { params : Promise<{ id: string
 
     const { id } = await params;
 
-    const tmp = await fetch("http://127.0.0.1:8080/docs/" + id, { next: { revalidate: config.RevalidateTime } });
-    const data: Data = await tmp.json();
+    const data: DocData | undefined = await GetDoc(id);
 
-    if (tmp.status != 200) {
+    if (!data) {
 
+        console.log(`doc '${id}' is invalid!`);
         return (
-            <>
-                <h2>Invalid document: {id}</h2>
-                <p>Could not get the document for entry {id} from server, try again in few moments or contact me somehow</p>
-            </>
+            <NotFound/>
         )
 
     }
@@ -34,14 +28,10 @@ export default async function Page({ params, } : { params : Promise<{ id: string
         <>
             <h2>{id}</h2>
             <div className={styles.doc}>
-                <p>{data.summary}</p>
-                <Details data={data}/>
-
-                {data.variables && <Variables list={data.variables}/>}
-                {data.types && <Types list={data.types}/>}
-                {data.values && <Values list={data.values}/>}
-                {data.functions && <Functions list={data.functions}/>}
-                {data.defines && <Defines list={data.defines}/>}
+                <h1>{data.name}</h1>
+                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+                    {data.content}
+                </ReactMarkdown>
             </div>
         </>
     )
