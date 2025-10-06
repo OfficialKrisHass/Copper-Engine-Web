@@ -1,4 +1,5 @@
 .latest {
+    max-width: 100%;
     background-color: var(--card-color);
     border-radius: 12px;
     padding: 15px;
@@ -27,6 +28,12 @@
 
 .info {
     color: var(--text-color);
+    max-width: 100%;
+}
+.info p {
+    --max-lines: 3;
+    max-height: calc(1rem * var(--max-lines));
+    overflow: hidden;
 }
 
 .articleList {
@@ -34,4 +41,14 @@
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+}
+
+@media (max-width: 768px) {
+    .latest {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+    .articleList {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

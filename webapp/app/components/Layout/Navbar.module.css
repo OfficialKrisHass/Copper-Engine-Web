@@ -12,19 +12,17 @@
   align-items: center;
 }
 
-.navbar h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  font-family: var(--font-title);
-  margin-right: 80px;
-  margin-left: 20px;
-  text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+.logo {
+    background-color: var(--navbar-base-color);
+    aspect-ratio: 1/1;
+    width: 2.2rem;
+    margin-left: 15px;
 }
+
 .navbar a {
   background-color: var(--navbar-base-color);
   color: var(--text-color);
-  padding: 0.9rem 50px;
-  font-size: 2rem;
+  padding: 0.9rem 10px;
   text-align: center;
   text-decoration: none;
 }
@@ -33,6 +31,7 @@
     color: var(--text-color);
 }
 .navbar p {
+    font-size: clamp(0.9rem, 2vw, 1.3rem);
     font-weight: 700;
     font-family: var(--font-title);
 }
