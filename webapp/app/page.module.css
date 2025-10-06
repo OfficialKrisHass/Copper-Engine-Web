@@ -10,9 +10,6 @@
     padding: 75px 0px;
     max-width: 85vw;
 }
-.container p {
-    padding: 0px 15px;
-}
 .container p a {
     background-color: var(--base-color);
 }
@@ -67,18 +64,25 @@
 }
 
 .heroText h1 {
-  font-size: 5rem;
+  font-size: clamp(2.5rem, 10vw, 5rem);
   font-weight: 900;
   font-family: var(--font-title);
-  margin: 50px;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
 .heroText h2 {
-  font-size: 2rem;
+  font-size: clamp(1.8rem, 6vw, 2rem);
   font-weight: 500;
   font-family: var(--font-subtitle);
+  margin-top: 20px;
   text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
+
+/* About */
+
+.container > p {
+    padding: 0px 15px;
+}
+
 
 /* News */
 
@@ -91,15 +95,15 @@
 /* Contribute */
 
 .helpContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
-    padding: 0px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .help {
     padding: 15px;
     text-align: center;
+    flex: 0 0 calc(33.33%);
 }
 
 /* Next defaults */
@@ -123,36 +127,35 @@
 }
 
 @media (max-width: 600px) {
-  .page {
-    padding: 32px;
-    padding-bottom: 80px;
-  }
+    .help {
+        flex: 0 0 calc(50%);
+    }
 
-  .main {
-    align-items: center;
-  }
+    .main {
+        align-items: center;
+    }
 
-  .main ol {
-    text-align: center;
-  }
+    .main ol {
+        text-align: center;
+    }
 
-  .ctas {
-    flex-direction: column;
-  }
+    .ctas {
+        flex-direction: column;
+    }
 
-  .ctas a {
-    font-size: 14px;
-    height: 40px;
-    padding: 0 16px;
-  }
+    .ctas a {
+        font-size: 14px;
+        height: 40px;
+        padding: 0 16px;
+    }
 
-  a.secondary {
-    min-width: auto;
-  }
+    a.secondary {
+        min-width: auto;
+    }
 
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
+    .footer {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
 }

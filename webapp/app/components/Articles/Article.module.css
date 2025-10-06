@@ -24,8 +24,12 @@
 
 .info {
     margin-top: 10px;
-    height: 160px;
 }
 .info p {
-    font-size: 1.2rem;
+    --max-lines: 4;
+    --line-height: 1.1rem;
+
+    font-size: 1.1rem;
+    max-height: calc(var(--line-height) * var(--max-lines));
+    overflow: hidden;
 }

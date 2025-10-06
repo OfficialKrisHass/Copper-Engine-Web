@@ -3,8 +3,10 @@
 }
 
 .entry {
-    margin-left: 20px;
+    margin-left: 0.6rem;
     margin-bottom: 8px;
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+    overflow: clip;
 }
 .entry a {
     color: var(--text-color);
