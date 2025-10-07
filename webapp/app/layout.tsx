@@ -22,10 +22,27 @@ const subtitleFont = localFont({
     weight: "100 900",
 })
 
+const title = "Copper-Engine";
+const description = "The different choice. Copper-Engine is a modern open-source game engine empowering indie developers to create unique games that rival the biggest studios.";
 export const metadata: Metadata = {
-  title: "Copper-Engine",
-  description: "Copper-Engine website",
-};
+    metadataBase: new URL("https://coppr.dev"),
+    title: title,
+    description: description,
+    openGraph: {
+        title: title,
+        siteName: "Copper-Engine",
+        description: description,
+        type: "website",
+        url: "https://coppr.dev",
+        images: {
+            url: "screenshots/CopperPromotional.png",
+            width: 1200,
+            height: 675,
+            alt: "Copper-Engine Blog",
+        },
+        locale: "en_US",
+    }
+}
 
 export default function RootLayout({
   children,

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://coppr.dev
+
+# Sitemaps
+Sitemap: https://coppr.dev/sitemap.xml

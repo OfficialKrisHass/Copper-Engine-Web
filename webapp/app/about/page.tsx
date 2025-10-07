@@ -7,7 +7,7 @@ import styles from "./page.module.css"
 export default async function About() {
 
     return (
-        <main className={styles.main}>
+        <>
             <div className={styles.header}>
                 <img src={"/screenshots/CopperPromotional.png"} alt="Copper Editor screenshot"/>
                 <div className={styles.headerText}>
@@ -23,7 +23,7 @@ export default async function About() {
                     <Content/>
                 </Suspense>
             </div>
-        </main>
+        </>
     )
 
 }

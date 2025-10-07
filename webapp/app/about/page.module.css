@@ -1,8 +1,3 @@
-.main {
-    min-height: var(--page-full-height);
-    padding-bottom: 100px;
-}
-
 .header {
     position: relative;
     top: 0px;

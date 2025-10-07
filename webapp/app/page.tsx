@@ -13,7 +13,7 @@ export default function Home() {
         <img src={"/screenshots/CopperPromotional.png"} alt="Copper Editor screenshot"/>
         <div className={styles.heroText}>
           <h1>Copper-Engine</h1>
-          <h2>The worst choice</h2>
+          <h2>The different choice</h2>
         </div>
       </div>
       <section id="about" className={styles.container}>
