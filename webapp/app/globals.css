@@ -1,5 +1,37 @@
 :root {
-  --base-color: #ffffff;
+  --base-color: #f4f2ef;
+  --base-color-secondary: #ebe8e5;
+  --dark-color: #ffffff;
+  --dark-color-secondary: #f9f8f7;
+  --card-color: #ffffff;
+  --accent-color: #0077cc;
+  --accent-color-secondary: #005999;
+  --text-color: #1a1a18;
+  --text-color-secondary: #d15c00;
+  --button-color: var(--dark-color);
+
+  --link-color: var(--text-color-secondary);
+  --link-color-hover: #b84f00;
+      
+  --navbar-base-color: rgba(250, 249, 247, 1);
+
+  --base-color-hover: #eae8e5;
+  --base-color-secondary-hover: #e2dfdc;
+  --dark-color-hover: #f5f4f3;
+  --card-color-hover: #faf9f8;
+  --button-color-hover: #e1781a;
+
+  --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  --box-shadow-small: 0px 0px 6px rgba(0, 0, 0, 0.1);
+
+  --code-bg-color: #f5f3f0;
+
+  --table-head-color: #f0eeeb;
+  --table-row-color: #fafafa;
+  --table-row-color-secondary: #f5f4f3;
+  --table-border-color: #dddcd9;
+
+  --page-full-height: calc(100vh - calc(2rem + 0.9rem));
 }
 
 html,
@@ -9,7 +41,7 @@ body {
 }
 
 body {
-  color: #ededed;
+  color: var(--text-color);
   background: var(--base-color);
   font-family: var(--font-main);
   -webkit-font-smoothing: antialiased;
@@ -26,7 +58,7 @@ h2 {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 30px;
-    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+    
 }
 h3 {
     font-size: 1.6rem;
@@ -72,6 +104,14 @@ a:hover {
 }
 
 @media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+
+  h2 {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 0.9);
+  }
+
   :root {
     --base-color: #100e0c;
     --base-color-secondary: #131211;

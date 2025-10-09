@@ -31,7 +31,7 @@
     max-width: 100%;
 }
 .info p {
-    --max-lines: 3;
+    --max-lines: 10;
     max-height: calc(1rem * var(--max-lines));
     overflow: hidden;
 }
