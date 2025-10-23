@@ -29,7 +29,7 @@ export default function Ethos() {
                main branch could introduce issues or security concerns for people using the main branch for their own projects.</p>
             <br/>
             <p>Contribution to the Copper-Engine project and any of its associated projects is more than welcome, even encouraged. Same goes for modding, extensions,
-               forks and any other customization/modification of the original source code, as long as it isn't on the <Link href="/about?view=ethos#nono">'nono' list</Link>.</p>
+               forks and any other customization/modification of the original source code.</p>
             <br/>
 
             <h3 id="lifetime">Game "licenses" & lifetimes</h3>
@@ -52,18 +52,6 @@ export default function Ethos() {
             <p>The Copper-Engine project and team has zero rights to take any percentage off of revenue made from Copper-Engine games. And it will remain this way
                for the rest of time. Games made with Copper-Engine are your hard work, for which we only provided the tools. Wouldn't it be for us, you would have
                used a different engine and most likely achieved the same result.</p>
-            <br/>
-
-            <h3 id="nono">Nono list</h3>
-            <p>This is a list of projects and/or modifications that are strictly prohibited from being made and published with Copper-Engine.</p>
-            <br/>
-            <ul>
-                <li><p>Cryptocurrency projects</p></li>
-                <li><p>Malicious projects (ransomware, spyware, etc)</p></li>
-                <li><p>Any project that collects and sells user data</p></li>
-                <li><p>Game cheats</p></li>
-                <li><p>Viruses</p></li>
-            </ul>
         </>
     )
 
