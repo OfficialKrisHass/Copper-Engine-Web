@@ -1,7 +1,7 @@
 ---
 title: Why you should (not) use Copper-Engine
 summary: We've received lots of questions about why you should use Copper, what it brings to the table, and what it will do different. Find out why you should (not) use Copper-Engine and how you can help us shape our project.
-thumbnail: /screenshots/CopperPromotional.png
+thumbnail: /articles/media/why-not/Thumbnail.png
 ---
 Hello, World!
 
