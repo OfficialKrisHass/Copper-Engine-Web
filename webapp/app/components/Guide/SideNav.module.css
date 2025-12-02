@@ -1,0 +1,22 @@
+.sideNav {
+    min-width: 275px;
+    padding: 10px;
+    background-color: var(--dark-color-secondary);
+}
+.sideNav h3 {
+    margin: 15px 0px;
+}
+
+.sideNav ul {
+    padding: 0px;
+    list-style-type: none;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.sideNav li {
+    margin: 5px 0px;
+}
+.sideNav a {
+    color: var(--text-color);
+    text-decoration: none;
+}

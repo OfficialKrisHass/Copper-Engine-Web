@@ -1,0 +1,10 @@
+.main {
+    display: flex;
+    min-height: var(--page-full-height);
+}
+
+.page {
+    width: 1200px;
+    max-width: 75vw;
+    margin: 0px auto;
+}

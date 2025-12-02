@@ -8,7 +8,9 @@
   --accent-color-secondary: #005999;
   --text-color: #1a1a18;
   --text-color-secondary: #d15c00;
+  --text-color-disabled: #8a8887;
   --button-color: var(--dark-color);
+  --button-color-disabled: var(--dark-color);
 
   --link-color: var(--text-color-secondary);
   --link-color-hover: #b84f00;
@@ -44,6 +46,8 @@ body {
   color: var(--text-color);
   background: var(--base-color);
   font-family: var(--font-main);
+  font-size: 1.3rem;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -122,7 +126,9 @@ a:hover {
     --accent-color-secondary: #176ebb;
     --text-color: #ededed;
     --text-color-secondary: #ff8121;
+    --text-color-disabled: #8a8887;
     --button-color: var(--dark-color-secondary);
+    --button-color-disabled: var(--dark-color);
 
     --link-color: var(--text-color-secondary);
     --link-color-hover: #e8711a;
@@ -138,7 +144,7 @@ a:hover {
     --box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
     --box-shadow-small: 0px 0px 8px rgba(0, 0, 0,0.5);
 
-    --code-bg-color: #0a0a09;
+    --code-bg-color: #080d09;
 
     --table-head-color: #0b0b08;
     --table-row-color: #131311;

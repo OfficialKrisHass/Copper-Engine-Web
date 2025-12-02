@@ -1,0 +1,74 @@
+.container {
+    padding-top: 20px;
+    padding-bottom: 64px;
+    background-color: var(--base-color-secondary);
+}
+.container h1, .container h2, .container h3, .container h4 {
+    text-align: center;
+    margin: 1.5rem 0px;
+}
+
+.article {
+    width: 80%;
+    margin: auto;
+}
+.article p {
+    margin: 1rem 0px;
+}
+.article code {
+    background-color: var(--code-bg-color);
+    font-size: 1.2rem;
+}
+.codeblock {
+    border-radius: 1rem;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-x: hidden;
+}
+.inlineCode {
+    padding: 3px 6px;
+    border-radius: 0.5rem;
+}
+
+.article img {
+    display: block;
+    width: 75%;
+    height: auto;
+    max-height: 500px;
+    object-fit: contain;
+    margin: 1.5rem auto;
+}
+
+.article li {
+    margin: 0.8rem 0px;
+}
+.article li p {
+    margin: 0px;
+}
+.article li strong {
+    font-weight: 600;
+}
+
+.navigationContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigationContainer a {
+    background-color: var(--button-color);
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-small);
+    border-radius: 15px;
+    margin: 15px 20px;
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+.navigationContainer a:hover {
+    background-color: var(--button-color-hover);
+}
+.navigationContainer .disabled {
+    background-color: var(--button-color);
+    color: var(--text-color-disabled);
+    pointer-events: none;
+}

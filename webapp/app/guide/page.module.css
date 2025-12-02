@@ -1,0 +1,18 @@
+.container {
+    padding-top: 20px;
+    padding-bottom: 64px;
+    background-color: var(--base-color-secondary);
+}
+.container h1, .container h2, .container h3, .container h4 {
+    text-align: center;
+    margin: 1.5rem 0px;
+}
+
+.guide {
+    width: 80%;
+    min-height: 85vh;
+    margin: auto;
+}
+.guide p {
+    margin: 1rem 0px;
+}
