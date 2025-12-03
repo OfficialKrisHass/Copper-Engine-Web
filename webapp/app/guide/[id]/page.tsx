@@ -50,6 +50,11 @@ export default async function Page({ params } : { params : { id: string } }) {
                             </code>
                         )
                     }
+                }} urlTransform={(src) => {
+
+                    if (src.startsWith("http") || src.startsWith('/')) return src;
+                    return `/guide/${src}`;
+
                 }}>
                     {guide.content}
                 </ReactMarkdown>
